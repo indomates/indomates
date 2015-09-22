@@ -1,0 +1,22 @@
+{
+  "name": "newindomates",
+  "version": "0.0.1",
+  "description": "Indomates Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [
+    "indomates"
+  ],
+  "author": "Indomates",
+  "license": "ISC",
+  "dependencies": {
+    "bell": "^5.1.0",
+    "hapi": "^9.3.1",
+    "hapi-auth-cookie": "^3.1.0",
+    "inert": "^3.0.1",
+    "sequelize": "^3.9.0",
+    "sqlite3": "^3.1.0"
+  }
+}
