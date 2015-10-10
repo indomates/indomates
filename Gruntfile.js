@@ -7,17 +7,7 @@ module.exports = function(grunt) {
     //clean the output folder and unused css files
     clean: {
       output : {
-        src: ["dist"]
-      }
-    },
-
-    //move all js and font source files to the dist folder
-    copy: {
-      main: {
-        files: [
-          {expand: true, src: ['src/js/*'], dest: 'dist/js/', filter: 'isFile', flatten: true},
-          {expand: true, src: ['src/fonts/*'], dest: 'dist/fonts/', filter: 'isFile', flatten: true}
-        ]
+        src: ["public/dist"]
       }
     },
 
@@ -26,8 +16,8 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       build: {
-        src: 'dist/js/bootcards.js',
-        dest: 'dist/js/bootcards.min.js'
+        src: 'public/dist/js/bootcards.js',
+        dest: 'public/dist/js/bootcards.min.js'
       }
     },
 
@@ -36,7 +26,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ['*.scss'],
-          dest: 'dist/css',
+          dest: 'public/dist/css',
           ext: '.css',
           flatten: true
         }]
@@ -48,9 +38,9 @@ module.exports = function(grunt) {
         options: { banner: '<%= banner %>' },
         files: [{
           expand: true,
-          cwd: 'dist/css/',
+          cwd: 'public/dist/css/',
           src: ['*.css', '!*.min.css'],
-          dest: 'dist/css/',
+          dest: 'public/dist/css/',
           ext: '.min.css'
         }]
       }
@@ -71,7 +61,6 @@ module.exports = function(grunt) {
   //load grunt plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -79,10 +68,8 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', [
     'clean:output',
-    'copy',
     'uglify',
     'sass',
     'cssmin:minify'
     ]);
-
 };

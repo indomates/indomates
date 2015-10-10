@@ -13,12 +13,15 @@ Clone the repo
 Install project dependencies
 ```
 npm install
+cd public
+bower install
+cd ..
 ```
 
 #### Step 4.
 Run the development server
 `npm run start`
-And go to http://localhost:3000 to view the site.
+and go to http://localhost:3000 to view the site.
 
 #### Step 5.
 Stay Awesome!
