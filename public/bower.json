@@ -1,19 +1,8 @@
 {
-  "name": "bootcards",
-  "description": "A cards-based UI framework for mobile and desktop apps, built on top of Bootstrap",
-  "version": "1.1.2",
+  "name": "newIndomates",
+  "description": "Indomates front-end",
+  "version": "0.0.1",
   "license": "MIT",
-  "keywords": [
-    "css",
-    "js",
-    "mobile",
-    "responsive",
-    "front-end",
-    "framework",
-    "web",
-    "bootstrap",
-    "cards"
-  ],
   "main": [
     "./dist/css/bootcards-desktop.css",
     "./dist/css/bootcards-desktop.min.css",
